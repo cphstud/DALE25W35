@@ -8,19 +8,28 @@ res <- 25-20*30-100*10
 pt <- c()
 
 
-
 # lav en function der tager et heltal som argument og 
 # returnerer en vektor med en talrække fra 1 til tallet
+myRow <- function(myNumber) {
+  retval=0
+  retval=1:myNumber
+  return(retval)
+}
 
+testrow <- myRow(34)
 
 # lav en function som returnerer 0 hvis et tal ikke er et primtal
 # du må kun bruge det som du har med fra de første 5 kapitler. 
 # Altså ikke betingelser (ifelse)
+# brug modulo
+tal=17
+
 
 
 # lav en vector med 1000 tal uniform fordelt 1 til 6
-
+nums <- c()
 # lav et sample på 2 observationer fra nums og beregn mean
+
 
 # gentag dette 100 gange (replicate): lav et sample på 2 observationer fra nums og beregn mean
 # gem det i en vektor og plot
@@ -48,6 +57,10 @@ v3=rep()
 
 #indlæs filen test3.csv og ret den til så y ikke er en karakter men numerisk
 df=read.csv("data/test3.csv")
+str(df)
+test3=df
+df$yy=as.numeric(df$y)
+df$y2=signif(df$yy,2)
 
 
 #Lav en dataframe på 5 observationer som simulerer alder og kropsvægt
