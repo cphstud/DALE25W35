@@ -59,6 +59,7 @@ v3=rep()
 df=read.csv("data/test3.csv")
 str(df)
 test3=df
+test3=df
 df$yy=as.numeric(df$y)
 df$y2=signif(df$yy,2)
 
